@@ -991,6 +991,11 @@ Use the [Entity Customization Tool](/docs/configuration/customizing-devices/#cus
 
 Disable and re-enable the skill using the Alexa App; then restart Home Assistant.
 
+### Failed to link account during Alexa Skill activation <!-- omit in toc -->
+
+Sometimes it doesn't work when entering port 8123 in BASE_URL of [Environment variables](https://www.home-assistant.io/integrations/alexa.smart_home/#add-code-to-the-lambda-function) and Autorization URL of [Account Linking](https://www.home-assistant.io/integrations/alexa.smart_home/#account-linking). Just redirect external port `443` to internal port `8123`, and use your external Home Assistant url without specifying the port like; before: `https://your.homeassistanturl.com:8123` now: `https://your.homeassistanturl.com`.
+
+
 ## Debugging
 
 The Alexa integration will log additional information about state updates and other messages when the log level is set to `debug`. Add the relevant line below to the `configuration.yaml`:
